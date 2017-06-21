@@ -287,7 +287,7 @@ a:hover svg {transition: fill 50ms ease;}
 
 .landing-text {
   margin-top: 105px;
-  font-size: 2.80vw;
+  font-size: 2.8vw;
   font-family: 'MinionPro', Garamong, serif;
   font-style: italic;
   font-weight: 500;
@@ -322,10 +322,6 @@ a:hover svg {transition: fill 50ms ease;}
 /* @end VIDEO */
 
 /* @group FEATURES */
-.features-container {
-  // margin-top: 40px;
-}
-  
   .feature {
     margin: 20vh auto;
   }
@@ -344,7 +340,7 @@ a:hover svg {transition: fill 50ms ease;}
     .feature-text {
       font-family: 'MinionPro', Garamond, serif;
       font-size: 1.5vw;
-      line-height: normal;
+      line-height: 1.6;
       opacity: 0.5;
       font-weight: 400;
       width: 75%;
@@ -352,7 +348,49 @@ a:hover svg {transition: fill 50ms ease;}
       margin-top: 5vh;
     }
 
+    .social-links {
+      padding: 0;
+      margin-top: 10vh;
+    }
+    .social-links > li {
+      display: inline-block;
+      margin-right: 30px;
+    }
+      .social-links > li:last-child {
+        margin-right: 0;
+      }
+    .social-link-image {
+      width: 30px;
+      max-height: 30px;
+      height: auto;
+    }
+
 /* @end FEATURES */
+
+/* @group WEEK-ARTIST */
+.section-title {
+  font-size: 1.4vw;
+  font-weight: 500;
+}
+
+  .artist-title {
+    font-size: 2.8vw;
+    font-family: 'MinionPro', Garamond, serif;
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  .artist-text {
+    font-size: 1.2vw;
+    line-height: 1.6;
+    opacity: 0.5;
+    font-weight: 400;
+    width: 90%;
+    max-width: 100%;
+    margin-top: 3vh;
+  }
+
+/* @end WEEK-ARTIST */
 
 
 /* @group PRINT */
