@@ -1,4 +1,4 @@
-/*!
+!
  * Style by Datagif
  * Unminified version: ./main.css
  * 
@@ -103,11 +103,17 @@ q::after, blockquote > p::after {content: close-quote;}
 @font-face {
   font-family: 'MinionPro';
   font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/MinionPro-Regular.woff') format('woff'),
+       url('../fonts/MinionPro-Regular.otf')  format('opentype');
+}
+@font-face {
+  font-family: 'MinionPro';
+  font-style: normal;
   font-weight: 500;
   src: url('../fonts/MinionPro-Semibold.woff') format('woff'),
        url('../fonts/MinionPro-Semibold.otf')  format('opentype');
 }
-
 @font-face {
   font-family: 'MinionPro';
   font-style: italic;
@@ -151,7 +157,7 @@ body {
      ::selection {background-color: #b3d4fc; text-shadow: none}
 */
 
-img {
+img, video {
   max-width: 100%;
   height: auto;
 }
@@ -212,37 +218,37 @@ a:hover svg {transition: fill 50ms ease;}
 }
 
 .one-eleventh {
-  min-width: 9.09%;
+  width: 9.09%;
 }
 .two-eleventh {
-  min-width: 18.18%; 
+  width: 18.18%; 
 }
 .three-eleventh {
-  min-width: 27.27%;
+  width: 27.27%;
 }
 .four-eleventh {
-  min-width: 36.36%;
+  width: 36.36%;
 }
 .five-eleventh {
-  min-width: 45.45%;
+  width: 45.45%;
 }
 .six-eleventh {
-  min-width: 54.54%;
+  width: 54.54%;
 }
 .seven-eleventh {
-  min-width: 63.63%;
+  width: 63.63%;
 }
 .height-eleventh {
-  min-width: 72.72%;
+  width: 72.72%;
 }
 .nine-eleventh {
-  min-width: 81.81%;
+  width: 81.81%;
 }
 .ten-eleventh {
-  min-width: 90.09%;
+  width: 90.09%;
 }
 .eleven-eleventh {
-  min-width: 100%;
+  width: 100%;
 }
 
 
@@ -307,14 +313,46 @@ a:hover svg {transition: fill 50ms ease;}
 .video-teaser {
   max-width: 100%;
   max-height: 90vh;
+  -moz-box-shadow: 0px 0px 10px 0px #cfcfcf;
+  -webkit-box-shadow: 0px 0px 10px 0px #cfcfcf;
+  -o-box-shadow: 0px 0px 10px 0px #cfcfcf;
+  box-shadow: 0px 0px 10px 0px #cfcfcf;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#cfcfcf, Direction=NaN, Strength=10);
 }
-
-  .ytp-cued-thumbnail-overlay-image {
-    background-image: url('../img/logo.svg') !important;
-    background-size: auto auto !important;
-    background-color: #fff;
-  }
 /* @end VIDEO */
+
+/* @group FEATURES */
+.features-container {
+  // margin-top: 40px;
+}
+  
+  .feature {
+    margin: 20vh auto;
+  }
+
+  .feature:nth-child(2n) .feature-title,
+  .feature:nth-child(2n) .feature-text {
+    text-align: right;
+    margin-left: auto;
+  }
+    .feature-title {
+      font-size: 2.18vw;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    .feature-text {
+      font-family: 'MinionPro', Garamond, serif;
+      font-size: 1.5vw;
+      line-height: normal;
+      opacity: 0.5;
+      font-weight: 400;
+      width: 75%;
+      max-width: 100%;
+      margin-top: 5vh;
+    }
+
+/* @end FEATURES */
 
 
 /* @group PRINT */
@@ -342,4 +380,4 @@ a:hover svg {transition: fill 50ms ease;}
   
 }
 
-/* @end PRINT */
+/* @end PRINT 
