@@ -148,6 +148,7 @@ html {
 }
 
 body {
+  margin: 0;
   min-height: 100%;
   background-color: #fff;
 }
@@ -188,6 +189,7 @@ a:hover svg {transition: fill 50ms ease;}
 /* @group LAYOUTS */
 
 .main-container {
+  position: relative;
   width: 100%;
   max-width: 100%;
   margin-left: auto;
@@ -262,13 +264,20 @@ a:hover svg {transition: fill 50ms ease;}
   width: 100%;
   left: 0;
   top: -80vh;
-  background-image: url('../img/background1.svg');
   background-size: auto 100%;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center center;
   z-index: -1;
 }
+  .background-container-one {
+    background-image: url('../img/background1.svg');
+  }
+  .background-container-two {
+    top: auto;
+    bottom: 0;
+    background-image: url('../img/background2.svg');
+  }
 
 /* @end BACKGROUND-CONTAINER */
 
@@ -391,6 +400,57 @@ a:hover svg {transition: fill 50ms ease;}
   }
 
 /* @end WEEK-ARTIST */
+
+/* @group PROGRAMMATION */
+
+.artist-image-container {
+  position: relative;
+}
+  .artist-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 2.8vw;
+    color: #fff;
+    font-family: 'MinionPro', Garamond, serif;
+    font-style: italic;
+    font-weight: 700;
+    margin: 0;
+  }
+
+/* @end PROGRAMMATION */
+
+/* @group ABOUT */
+
+.about-category {
+  font-size: 1.2vw;
+  opacity: 0.5;
+  margin-bottom: 3vh;
+}
+  .about-title {
+    margin: 30vh 0 10vh;
+  }
+
+  .about-members {
+    padding-left: 0;
+    margin-top: 5vh;
+    margin-bottom: 20vh;
+  }
+
+  .about-members li a {
+    font-family: 'MinionPro', Garamond, serif;
+    font-size: 2vw;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .about-members li a:active, .about-members li a:focus,
+  .about-members li a:hover, .about-members li a:visited {
+    outline: none;
+    text-decoration: none; 
+    color: #000;
+  }
+/* @end ABOUT */
 
 
 /* @group PRINT */
