@@ -153,10 +153,9 @@ body {
   background-color: #fff;
 }
 
-/*
-::-moz-selection {background-color: #b3d4fc; text-shadow: none}
-     ::selection {background-color: #b3d4fc; text-shadow: none}
-*/
+::-moz-selection {color: #e5e2fa; background-color: #000}
+::selection {color: #e5e2fa; background-color: #000}
+
 
 img, video {
   max-width: 100%;
@@ -177,8 +176,7 @@ a:active {
   top: 1px;
 }
 
-a:focus {outline: thin dotted;}
-a:active, a:hover {outline: 0 none;}
+a:focus, a:active, a:hover {outline: 0 none;}
 
 a svg {transition: fill 100ms ease;}
 a:hover svg {transition: fill 50ms ease;}
@@ -253,7 +251,6 @@ a:hover svg {transition: fill 50ms ease;}
   width: 100%;
 }
 
-
 /* @end LAYOUTS */
 
 /* @group BACKGROUND-CONTAINER */
@@ -263,19 +260,20 @@ a:hover svg {transition: fill 50ms ease;}
   height: 280vh;
   width: 100%;
   left: 0;
-  top: -80vh;
-  background-size: auto 100%;
+  background-size: cover;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: left top;
   z-index: -1;
 }
   .background-container-one {
+    top: -100vh;
     background-image: url('../img/background1.svg');
   }
   .background-container-two {
     top: auto;
     bottom: 0;
+    background-position: right bottom;
     background-image: url('../img/background2.svg');
   }
 
@@ -292,6 +290,8 @@ a:hover svg {transition: fill 50ms ease;}
   max-height: 105px;
   width: auto;
   font-size: 0;
+  opacity: 0;
+  transform: translateY(-10px);
 }
 
 .landing-text {
@@ -303,10 +303,17 @@ a:hover svg {transition: fill 50ms ease;}
   letter-spacing: -0.016em;
   line-height: normal;
 }
+  .landing-text i {
+    opacity: 0;
+    transform-origin: left center;
+    display: inline-block;
+  }
 
 .landing-btn {
   margin-top: 40px;
   width: 100%;
+  opacity: 0;
+  transform: translateY(-6px);
 }
   .landing-btn-image {
     max-width: 50%;
@@ -451,6 +458,150 @@ a:hover svg {transition: fill 50ms ease;}
     color: #000;
   }
 /* @end ABOUT */
+
+
+
+/* @group RESPONSIVE */
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .landing-text {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 815px) {
+  .landing .four-eleventh {
+    width: 60%;
+  }
+}
+
+@media (max-width: 667px) {
+  .mobile-only {
+    display: block;
+  }
+  .desktop-only {
+    display: none;
+  }
+
+  .main-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .section {
+    min-height: auto;
+  }
+
+  .background-container {
+    height: 80vh;
+    background-size: cover;
+  }
+    .background-container-one {
+      top: 0;
+    }
+
+  .landing .four-eleventh {
+    width: 100%;
+  }
+  .landing-btn {
+    display: none;
+  }
+
+  .columns-container {
+    display: block;
+  }
+  .columns-container > div:empty {
+    display: none;
+  }
+  .columns-container > div {
+    padding: 0;
+    width: 100%;
+    display: block;
+  }
+  .landing-logo {
+    width: 100px;
+    margin-top: 50px;
+  }
+  .landing-text {
+    display: inline-block;
+    margin: 75px auto 100px;
+    text-align: left;
+  }
+
+  .feature {
+    position: relative;
+  }
+
+  .video-teaser {
+    max-height: 50vh;
+  }
+
+  .feature-title {
+    font-size: 21px;
+  }
+  .feature-text {
+    font-size: 17px;
+    width: 100%;
+  }
+
+  .feature:nth-child(2n) .feature-title, .feature:nth-child(2n) .feature-text {
+    text-align: left;
+    margin: 21px auto;
+  }
+
+  .section-title {
+    font-size: 17px;
+  }
+    .artist-title {
+      font-size: 30px;
+    }
+    .artist-text {
+      font-size: 17px;
+    }
+  .social-links {
+    margin-bottom: 100px;
+  }
+
+  .artist-name {
+    font-size: 30px;
+    white-space: normal;
+  }
+  .artists-container {
+    width: 100%;
+    overflow: visible;
+    overflow-x: scroll;
+    display: flex;
+    padding: 0 10px 0 0;
+  }
+    .artists-container .three-eleventh {
+      white-space: nowrap;
+      display: inline-block;
+      min-width: 170px;
+      margin: 0px 10px;
+    }
+      .artists-container > div:nth-child(2) {
+        margin-left: 0;
+      }
+
+  .about-container {
+    padding-bottom: 100px;
+  }
+  .about-category {
+    font-size: 17px;
+  }
+  .about-members {
+    margin-bottom: 40px;
+  }
+  .about-members li a {
+    font-size: 25px;
+  }
+  }
+}
+/* @end RESPONSIVE */
+
 
 
 /* @group PRINT */
